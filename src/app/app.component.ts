@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
   title = 'app works!';
 
   ngOnInit() {
-    window.parent.postMessage('FRAME_LOADED', 'https://jsmeasure.herokuapp.com');
+    const url: any = new URL(document.location.href);
+    window.parent.postMessage('FRAME_LOADED', url.searchParams.get('host_url') || 'http://jsmeasure.surge.sh');
   }
 }
