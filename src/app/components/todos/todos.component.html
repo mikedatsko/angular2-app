@@ -1,0 +1,34 @@
+
+<table class="table table-striped table-hover">
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <td width="30" (click)="changeChecked(todo)">
+        <span
+          class="glyphicon"
+          [class.glyphicon-unchecked]="!todo.checked"
+          [class.glyphicon-check]="todo.checked"
+          >
+        </span>
+      </td>
+      <td>{{todo.text}}</td>
+      <td width="70">
+        <button
+          class="btn btn-info btn-xs"
+          type="button"
+          [disabled]="todo.isEdit"
+          (click)="edit(todo)"
+          >
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+        
+        <button
+          class="btn btn-danger btn-xs"
+          type="button"
+          [disabled]="todo.isEdit"
+          (click)="remove(todo)"
+          >
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+      </td>
+    </tr>
+</table>

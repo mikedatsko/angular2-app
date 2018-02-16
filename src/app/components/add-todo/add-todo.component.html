@@ -1,0 +1,27 @@
+
+<div class="row">
+  <div class="col-lg-12">
+    <form
+      action="javascript:void(0)"
+      method="POST"
+      #addForm
+      (submit)="add(addForm)"
+      >
+      <div class="input-group">
+        <input
+          class="form-control"
+          type="text"
+          name="todo"
+          placeholder="Todo text..."
+          ng-model="todoText"
+        >
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="submit">
+            <span ng-show="!todoId">Save</span>
+            <span ng-show="!!todoId">Add</span>
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
