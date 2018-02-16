@@ -19,8 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../../../vendors/bootstrap/css/bootstrap.css",
-        "../../../vendors/bootstrap/css/bootstrap-theme.css",
+        "assets/css/bootstrap.css",
+        "assets/css/bootstrap-theme.css",
         "styles.css"
       ],
       "scripts": [
